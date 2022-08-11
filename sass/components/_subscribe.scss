@@ -1,0 +1,47 @@
+/* Subscription in the footer*/
+
+.subscribe {
+  @include flex-center;
+
+  gap: 12px;
+
+  &--position {
+    margin-left: auto;
+  }
+
+  &__user-mail {
+    width: 358px;
+    height: 50px;
+    padding: 15px;
+
+    border: 1px solid $border-subsc-cl;
+    border-radius: $radius-standart;
+    box-shadow: $shadow-hero-subsc-btn;
+
+    background-color: transparent;
+
+    transition: border-color $animation;
+  }
+
+  &__user-mail--position {
+    margin-right: auto;
+  }
+
+  &__user-mail:hover,
+  &__user-mail:focus {
+    border-color: $white-cl;
+  }
+
+  &__user-mail:placeholder-shown {
+    font-weight: 400;
+    @include line-height(16px, 20px);
+    letter-spacing: 0.03em;
+
+    color: $footer-cont-cl;
+  }
+
+  &__user-mail:not(:placeholder-shown):required {
+    color: $footer-cont-cl;
+    border-color: $white-cl;
+  }
+}

@@ -1,0 +1,38 @@
+.nav {
+  color: $title-txt-cl;
+
+  &__list {
+    @include flex-center;
+    gap: 50px;
+  }
+
+  &--current {
+    position: relative;
+    color: $accent-cl;
+  }
+
+  &--current::after {
+    content: "";
+
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    border-radius: $radius-current;
+    background-color: $accent-cl;
+  }
+
+  &__link {
+    @include flex-center;
+    @include padding-element;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-cl;
+  }
+}

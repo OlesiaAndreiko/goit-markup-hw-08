@@ -1,0 +1,36 @@
+.basic-btn {
+  @include flex-center;
+
+  min-width: 200px;
+  min-height: 50px;
+
+  font-family: inherit;
+  font-weight: 700;
+  @include line-height(16px, 30px);
+
+  letter-spacing: 0.06em;
+
+  color: $white-cl;
+  background: $accent-cl;
+  box-shadow: $shadow-hero-subsc-btn;
+
+  border-radius: $radius-standart;
+  border: none;
+
+  cursor: pointer;
+
+  transition: background-color $animation;
+
+  &--position {
+    @include block-center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent-btn-bg-cl;
+  }
+
+  &--icon {
+    gap: 10px;
+  }
+}

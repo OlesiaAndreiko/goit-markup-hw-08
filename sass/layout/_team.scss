@@ -1,0 +1,40 @@
+/* Team section */
+
+.team__section {
+  background-color: $light-bg-cl;
+}
+
+.team {
+  --card-item: 4;
+
+  &__item {
+    background-color: $white-cl;
+    box-shadow: $shadow-team-modal;
+
+    border-radius: $radius-team;
+  }
+
+  &__description {
+    padding: 30px;
+  }
+
+  &__person,
+  &__work {
+    @include line-height(16px, 19px);
+    text-align: center;
+  }
+
+  &__person {
+    font-weight: 500;
+
+    color: $title-txt-cl;
+  }
+
+  &__person--position {
+    margin-bottom: 10px;
+  }
+
+  &__work--position {
+    margin-bottom: 16px;
+  }
+}

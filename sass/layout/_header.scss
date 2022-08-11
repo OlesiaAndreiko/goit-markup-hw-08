@@ -1,0 +1,15 @@
+// Header section
+
+.header {
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+
+  border-bottom: 1px solid $border-header-cl;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    column-gap: 93px;
+  }
+}

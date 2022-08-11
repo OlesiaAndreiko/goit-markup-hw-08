@@ -1,0 +1,29 @@
+/* social list */
+
+.socials {
+  @include flex-center;
+  gap: 10px;
+}
+
+.social-link {
+  @include flex-center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: $radius-circle;
+
+  color: $social-clients-cl;
+
+  transition: color $animation, background-color $animation;
+
+  .footer & {
+    background-color: $social-footer-bg-cl;
+    color: $white-cl;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white-cl;
+    background-color: $accent-cl;
+  }
+}

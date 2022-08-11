@@ -1,0 +1,48 @@
+/* Modal window */
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+
+  background-color: $white-cl;
+  box-shadow: $shadow-team-modal;
+
+  border-radius: $radius-standart;
+
+  transition: transform $animation, opacity $animation;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @include flex-center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  background-color: transparent;
+
+  border: none;
+  border-radius: $radius-circle;
+
+  transition: color $animation;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $accent-cl;
+  }
+}

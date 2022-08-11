@@ -1,0 +1,26 @@
+/* Servises section */
+
+.services {
+  padding-top: 0;
+
+  &__card {
+    position: relative;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    display: block;
+    @include padding-element(27px);
+
+    font-weight: 700;
+    line-height: calc(16 / 14);
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $white-cl;
+    background-color: $olervay-serv-cl;
+  }
+}

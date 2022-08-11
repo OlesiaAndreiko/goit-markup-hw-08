@@ -1,0 +1,96 @@
+/* Modal-register-form */
+
+.register {
+  text-align: center;
+
+  &__title {
+    display: block;
+
+    @include line-height(20px, 23px);
+    text-align: center;
+
+    color: $title-txt-cl;
+  }
+
+  &__title--position {
+    margin-bottom: 12px;
+  }
+
+  &__contacts--position {
+    margin-bottom: 20px;
+  }
+
+  &__label--position:not(:last-child) {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    display: block;
+    padding-left: 2px;
+
+    text-align: left;
+    @include line-height(12px, 14px);
+    letter-spacing: 0.01em;
+  }
+
+  &__name--position {
+    margin-bottom: 4px;
+  }
+
+  &--wrap {
+    position: relative;
+    display: block;
+  }
+
+  &__input,
+  &__comment {
+    display: block;
+
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    padding-left: 42px;
+
+    color: $black-txt-cl;
+
+    border: 1px solid $ovarlay-modal-cl;
+    border-radius: $radius-standart;
+    outline: transparent;
+
+    transition: border-color $animation;
+  }
+
+  &__comment {
+    padding: 12px 16px;
+    height: 120px;
+
+    resize: none;
+  }
+
+  &__comment::placeholder {
+    color: $textarea-placeholder-cl;
+  }
+
+  &__input:hover,
+  &__input:focus,
+  &__comment:hover,
+  &__comment:focus {
+    border-color: $accent-cl;
+  }
+
+  &__icon {
+    position: absolute;
+
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+
+    transition: fill $animation;
+  }
+
+  &__input:hover + &__icon,
+  &__input:focus + &__icon {
+    fill: $accent-cl;
+  }
+}

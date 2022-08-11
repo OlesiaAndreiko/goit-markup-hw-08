@@ -1,0 +1,54 @@
+/* fonts*/
+$main-fonts: "Roboto", sans-serif;
+$logo-font: "Raleway", sans-serif;
+
+/* text-colors */
+$main-txt-cl: #757575;
+$title-txt-cl: #212121;
+$black-txt-cl: #000000;
+$footer-cont-cl: rgba(255, 255, 255, 0.6);
+$textarea-placeholder-cl: rgba(117, 117, 117, 0.5);
+
+/* bg-colors */
+$dark-bg-cl: #2f303a;
+$light-bg-cl: #f5f4fa;
+$accent-btn-bg-cl: #188ce8;
+$social-footer-bg-cl: rgba(255, 255, 255, 0.1);
+$overlay-header-cl: rgba(47, 48, 58, 0.4);
+$olervay-serv-cl: rgba(47, 48, 58, 0.8);
+$ovarlay-modal-cl: rgba(0, 0, 0, 0.2);
+$ovarlay-project-cl: rgba(33, 150, 243, 0.9);
+
+/* others-colors */
+$accent-cl: #2196f3;
+$white-cl: #ffffff;
+$social-clients-cl: #afb1b8;
+$border-header-cl: #ececec;
+$border-project-cl: #eeeeee;
+$border-subsc-cl: rgba(255, 255, 255, 0.3);
+
+/* shadow-colors */
+
+$shadow-hero-title: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$shadow-hero-subsc-btn: 0px 4px 4px rgba(0, 0, 0, 0.15);
+$shadow-team-modal: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+$shadow-btn-filter: 0px 3px 1px rgba(0, 0, 0, 0.1),
+  0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+$shadow-project: 0px 1px 1px rgba(0, 0, 0, 0.12),
+  0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+/* border-radius */
+$radius-standart: 4px;
+$radius-current: 2px;
+$radius-team: 0px 0px 4px 4px;
+$radius-circle: 50%;
+
+/* animation */
+$animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+:root {
+  /* flex-grid */
+  --card-gap: 30px;
+  --card-item: 3;
+}

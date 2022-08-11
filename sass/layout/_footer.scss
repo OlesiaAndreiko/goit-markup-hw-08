@@ -1,0 +1,35 @@
+/* Footer section */
+
+.footer {
+  @include padding-section(60px);
+
+  background-color: $dark-bg-cl;
+  color: $white-cl;
+
+  &__info {
+    display: flex;
+    align-items: baseline;
+    gap: 70px;
+  }
+
+  &__address {
+    font-style: inherit;
+  }
+
+  &--select {
+    transition: color $animation;
+  }
+
+  &--select:hover,
+  &--select:focus {
+    color: $accent-cl;
+  }
+
+  &__item--position:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &--contact {
+    color: $footer-cont-cl;
+  }
+}

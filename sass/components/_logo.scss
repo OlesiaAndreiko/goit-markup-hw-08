@@ -1,0 +1,22 @@
+/* logo slyles */
+
+.logo {
+  font-family: $logo-font;
+  font-weight: 700;
+  @include line-height(26px, 31px);
+
+  color: $accent-cl;
+
+  &__header {
+    color: $black-txt-cl;
+  }
+
+  &__footer {
+    color: $white-cl;
+  }
+
+  &--position {
+    display: block;
+    margin-bottom: 20px;
+  }
+}

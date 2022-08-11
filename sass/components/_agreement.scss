@@ -1,0 +1,44 @@
+// Agreement with the terms of the contract
+
+.agreement {
+  @include flex-center;
+
+  gap: 8px;
+
+  &--position {
+    margin-bottom: 30px;
+  }
+
+  &__check:hover + .agreement__icon,
+  &__check:focus + .agreement__icon {
+    fill: $accent-cl;
+  }
+
+  &__icon--check {
+    opacity: 0;
+    transition: opacity $animation;
+  }
+
+  &__check:checked + &__icon &__icon--check {
+    opacity: 1;
+    transition: opacity $animation;
+  }
+
+  &__check:checked + &__icon &__icon--uncheck {
+    opacity: 0;
+    transition: opacity $animation;
+  }
+
+  &__icon {
+    transition: fill $animation;
+  }
+
+  &__text {
+    user-select: none;
+  }
+
+  &__link {
+    text-underline-position: under;
+    color: $accent-cl;
+  }
+}

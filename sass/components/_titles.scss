@@ -1,0 +1,10 @@
+.section__title {
+  @include line-height(36px, 42px);
+  text-align: center;
+
+  color: $title-txt-cl;
+
+  &--position {
+    margin-bottom: 50px;
+  }
+}

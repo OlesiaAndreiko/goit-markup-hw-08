@@ -1,0 +1,12 @@
+// slogans in the footer
+
+.slogan {
+  display: block;
+
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+
+  &--position {
+    margin-bottom: 20px;
+  }
+}

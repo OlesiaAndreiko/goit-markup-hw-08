@@ -1,0 +1,41 @@
+/*  Hero section */
+
+.hero {
+  max-width: 1600px;
+  @include padding-section(200px);
+
+  text-align: center;
+
+  background-color: $dark-bg-cl;
+
+  background-image: linear-gradient(
+      to right,
+      $overlay-header-cl,
+      $overlay-header-cl
+    ),
+    url(../images/hero/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &--position {
+    @include block-center;
+  }
+
+  &__title {
+    max-width: 696px;
+
+    font-weight: 900;
+    @include line-height(44px, 60px);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: $white-cl;
+    text-shadow: $shadow-hero-title;
+  }
+
+  &__title--position {
+    margin-bottom: 30px;
+    @include block-center;
+  }
+}

@@ -1,0 +1,34 @@
+/* Вenefits section */
+
+.benefits {
+  --card-item: 4;
+
+  &__item {
+    display: block;
+  }
+
+  &__icon {
+    @include flex-center;
+
+    height: 120px;
+
+    background-color: $light-bg-cl;
+
+    border-radius: $radius-standart;
+  }
+
+  &__icon--position {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include line-height(14px, 16px);
+    text-transform: uppercase;
+
+    color: $title-txt-cl;
+  }
+
+  &__title--position {
+    margin-bottom: 10px;
+  }
+}
