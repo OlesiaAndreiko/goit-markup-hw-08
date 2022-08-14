@@ -6,6 +6,10 @@
   line-height: calc(16 / 14);
   text-transform: uppercase;
 
+  @include mq(noDesk) {
+    text-align: center;
+  }
+
   &--position {
     margin-bottom: 20px;
   }

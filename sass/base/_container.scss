@@ -1,6 +1,26 @@
 .container {
-  width: 1200px;
+  // mobile screen
+
   padding-left: 15px;
   padding-right: 15px;
+  // width: 100%;
   @include block-center;
+
+  // breakpoint 480px for mobile screen
+
+  @include mq (mob-only) {
+    width: 480px;
+  }
+
+  // breakpoint 768px for tablet screen
+
+  @include mq (tab) {
+    width: 768px;
+  }
+
+  // breakpoint 1200px for desktop screen
+
+    @include mq (desk) {
+    width: 1200px;
+  }
 }

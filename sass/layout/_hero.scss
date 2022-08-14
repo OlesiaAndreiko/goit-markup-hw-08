@@ -2,31 +2,103 @@
 
 .hero {
   max-width: 1600px;
-  @include padding-section(200px);
+
+  @include padding-section(118px);
+
+  @include mq(desk) {
+    @include padding-section(200px);
+  }
 
   text-align: center;
 
   background-color: $dark-bg-cl;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  // mobile screen
 
   background-image: linear-gradient(
       to right,
       $overlay-header-cl,
       $overlay-header-cl
     ),
-    url(../images/hero/hero.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    url(../images/hero/hero@1x_sm.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        $overlay-header-cl,
+        $overlay-header-cl
+      ),
+      url(../images/hero/hero@2x_sm.jpg);
+  }
+
+  // tablet screen
+
+  @include mq(tab) {
+    background-image: linear-gradient(
+        to right,
+        $overlay-header-cl,
+        $overlay-header-cl
+      ),
+      url(../images/hero/hero@1x_md.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $overlay-header-cl,
+          $overlay-header-cl
+        ),
+        url(../images/hero/hero@2x_md.jpg);
+    }
+  }
+
+  // desktop screen
+
+  @include mq(desk) {
+    background-image: linear-gradient(
+        to right,
+        $overlay-header-cl,
+        $overlay-header-cl
+      ),
+      url(../images/hero/hero@1x_lg.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $overlay-header-cl,
+          $overlay-header-cl
+        ),
+        url(../images/hero/hero@2x_lg.jpg);
+    }
+  }
 
   &--position {
     @include block-center;
   }
 
   &__title {
-    max-width: 696px;
+    max-width: 360px;
+
+    @include mq(desk) {
+      max-width: 696px;
+    }
 
     font-weight: 900;
-    @include line-height(44px, 60px);
+    @include line-height(26px, 42px);
+
+    @include mq(desk) {
+      @include line-height(44px, 60px);
+    }
+
     letter-spacing: 0.06em;
     text-transform: uppercase;
 

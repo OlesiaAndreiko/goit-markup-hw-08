@@ -1,6 +1,11 @@
 /* Servises section */
 
 .services {
+  
+ @include mq (noDesk) {
+  display: none;
+ }
+
   padding-top: 0;
 
   &__card {

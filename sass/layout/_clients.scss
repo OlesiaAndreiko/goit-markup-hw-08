@@ -1,7 +1,19 @@
 /* Clients section */
 
 .clients {
+ 
+  .card-item {
+
+    --card-item: 2;
+
+  @include mq (tab-only) {
+    --card-item: 3;
+  }
+
+  @include mq (desk) {
     --card-item: 6;
+  }
+}
     
   &__link {
     @include flex-center;

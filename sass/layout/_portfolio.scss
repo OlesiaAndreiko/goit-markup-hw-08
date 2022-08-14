@@ -1,105 +1,129 @@
 /* Portfolio section */
 
 .filter {
-  @include flex-center;
-  gap: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 15px;
+
+  @include mq (tab) {
+    justify-content: center;
+  }
 
   &--positon {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    @include mq (tab-only) {
+      margin-bottom: 30px;
+    }
+
+    @include mq (desk) {
+      margin-bottom: 50px;
+    }
   }
 }
 
-.filter-btn {
-  padding: 6px 22px;
+  .filter-btn {
+    padding: 6px 22px;
 
-  font-family: inherit;
-  background: $light-bg-cl;
-  font-weight: 500;
-  @include line-height(16px, 26px);
-  text-align: center;
+    font-family: inherit;
+    background: $light-bg-cl;
+    font-weight: 500;
+    @include line-height(16px, 26px);
+    text-align: center;
 
-  border-radius: $radius-standart;
-  border: none;
+    border-radius: $radius-standart;
+    border: none;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  transition: color $animation, background-color $animation,
-    box-shadow $animation;
+    transition: color $animation, background-color $animation,
+      box-shadow $animation;
 
-  &:hover,
-  &:focus {
-    color: $white-cl;
-    background-color: $accent-cl;
-    box-shadow: $shadow-btn-filter;
-  }
-}
-
-.project {
-  &__link {
-    display: block;
-
-    transition: box-shadow $animation;
+    &:hover,
+    &:focus {
+      color: $white-cl;
+      background-color: $accent-cl;
+      box-shadow: $shadow-btn-filter;
+    }
   }
 
-  &__link:hover,
-  &__link:focus {
-    box-shadow: $shadow-project;
+  .project {
+
+    .card-item {
+
+      @include mq(desk) {
+        --card-item: 3;
+      }
+    }
+
+    &__link {
+      display: block;
+
+      transition: box-shadow $animation;
+    }
+
+    &__link:hover,
+    &__link:focus {
+      box-shadow: $shadow-project;
+    }
+
+    &__description {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @include flex-center;
+      width: 100%;
+      height: 100%;
+
+      opacity: 0;
+      transform: translateY(100%);
+
+      transition: transform $animation, opacity $animation;
+    }
+
+    &__text {
+      padding: 63px 24px;
+
+      @include line-height(18px, 28px);
+
+      color: $white-cl;
+      background-color: $ovarlay-project-cl;
+    }
+
+    &__link:hover &__overlay,
+    &__link:focus &__overlay {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+
+    &__caption {
+      padding: 20px 24px;
+
+      border: 1px solid $border-project-cl;
+      border-top: none;
+    }
+
+    &__name {
+      @include line-height(18px, 36px);
+      letter-spacing: 0.06em;
+
+      color: $title-txt-cl;
+    }
+
+    &__name--position {
+      margin-bottom: 4px;
+    }
+
+    &__kind {
+      @include line-height(16px, 30px);
+    }
   }
-
-  &__description {
-    position: relative;
-    overflow: hidden;
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    @include flex-center;
-    width: 100%;
-    height: 100%;
-
-    opacity: 0;
-    transform: translateY(100%);
-
-    transition: transform $animation, opacity $animation;
-  }
-
-  &__text {
-    padding: 63px 24px;
-
-    @include line-height(18px, 28px);
-
-    color: $white-cl;
-    background-color: $ovarlay-project-cl;
-  }
-
-  &__link:hover &__overlay,
-  &__link:focus &__overlay {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-
-  &__caption {
-    padding: 20px 24px;
-
-    border: 1px solid $border-project-cl;
-    border-top: none;
-  }
-
-  &__name {
-    @include line-height(18px, 36px);
-    letter-spacing: 0.06em;
-
-    color: $title-txt-cl;
-  }
-
-  &__name--position {
-    margin-bottom: 4px;
-  }
-
-  &__kind {
-    @include line-height(16px, 30px);
-  }
-}

@@ -1,10 +1,21 @@
 .section__title {
-  @include line-height(36px, 42px);
+
+  @include line-height(28px, 32px);
+
+  @include mq(desk) {
+    @include line-height(36px, 42px);
+  }
+  
   text-align: center;
 
   color: $title-txt-cl;
+  
 
   &--position {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include mq(desk) {
+      margin-bottom: 50px;
+    }
   }
 }

@@ -1,19 +1,48 @@
 /* Footer section */
 
 .footer {
-  @include padding-section(60px);
-
   background-color: $dark-bg-cl;
   color: $white-cl;
 
   &__info {
-    display: flex;
-    align-items: baseline;
-    gap: 70px;
+    @include mq(desk) {
+      display: flex;
+      align-items: baseline;
+      gap: 70px;
+    }
+
+    @include mq(mob-only) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+
+    @include mq(tab-only) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &--position {
+      @include mq(tab-only) {
+        margin-bottom: 60px;
+        margin-right: auto;
+      }
+    }
   }
 
   &__address {
     font-style: inherit;
+
+    @include mq(noDesk) {
+      text-align: center;
+    }
+  }
+
+  &__socials {
+    @include mq(tab-only) {
+      margin-left: auto;
+    }
   }
 
   &--select {

@@ -3,7 +3,12 @@
 .logo {
   font-family: $logo-font;
   font-weight: 700;
-  @include line-height(26px, 31px);
+
+  @include line-height(24px, 28.18px);
+  
+  @include mq (desk) {
+  @include line-height(26px, 30.52px);
+}
 
   color: $accent-cl;
 
@@ -18,5 +23,9 @@
   &--position {
     display: block;
     margin-bottom: 20px;
+
+    @include mq(noDesk) {
+      text-align: center;
+    }
   }
 }
