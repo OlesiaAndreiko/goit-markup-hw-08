@@ -6,7 +6,12 @@
   &__title {
     display: block;
 
-    @include line-height(20px, 23px);
+    @include line-height(20px, 30px);
+
+    @include mq(desk) {
+      @include line-height(20px, 23px);
+    }
+
     text-align: center;
 
     color: $title-txt-cl;

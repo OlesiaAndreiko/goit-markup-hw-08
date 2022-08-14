@@ -1,9 +1,8 @@
 .nav {
-  
-  @include mq (mob-only) {
+  @include mq(mob-only) {
     display: none;
   }
-  
+
   color: $title-txt-cl;
 
   &__list {

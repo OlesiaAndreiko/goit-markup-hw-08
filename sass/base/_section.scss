@@ -1,8 +1,7 @@
 .section {
-
   @include padding-section;
-  
+
   @include mq(desk) {
-    @include padding-section (94px);
+    @include padding-section(94px);
   }
 }

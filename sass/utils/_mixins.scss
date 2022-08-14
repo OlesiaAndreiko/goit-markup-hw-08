@@ -9,9 +9,9 @@
   align-items: center;
 }
 
-@import './decimals';
+@import "./decimals";
 
-@mixin line-height($fs, $lh) { 
+@mixin line-height($fs, $lh) {
   font-size: $fs;
   line-height: decimal-round($lh / $fs);
 }
@@ -20,31 +20,37 @@
   $mob: 480px;
   $tab: 768px;
   $desk: 1200px;
+
   @if $range==mob {
     @media screen and (min-width: $mob) {
       @content;
     }
   }
+
   @if $range==mob-only {
     @media (max-width:#{$tab - 0.02}) {
       @content;
     }
   }
+
   @if $range==tab {
     @media screen and (min-width: $tab) {
       @content;
     }
   }
+
   @if $range==tab-only {
     @media (min-width:$tab) and (max-width:#{$desk - 0.02}) {
       @content;
     }
   }
+
   @if $range==desk {
     @media screen and (min-width: $desk) {
       @content;
     }
   }
+
   @if $range==noDesk {
     @media (max-width:#{$desk - 0.02}) {
       @content;
@@ -52,11 +58,9 @@
   }
 }
 
-
-@mixin padding-section ($padding: 60px) {
+@mixin padding-section($padding: 60px) {
   padding-top: $padding;
   padding-bottom: $padding;
-
 
   // @media screen and (min-width: 768px) {
   //   padding-top: 60px;
@@ -69,11 +73,10 @@
   // }
 }
 
-@mixin padding-element ($padding: 32px) {
+@mixin padding-element($padding: 32px) {
   padding-top: $padding;
   padding-bottom: $padding;
 }
-
 
 // @mixin card-set($gap: 30px) {
 //   display: flex;

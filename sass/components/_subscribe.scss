@@ -1,25 +1,24 @@
 /* Subscription in the footer*/
 
 .subscribe {
-
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
-   gap: 20px;
-  
- @include mq(desk) {
-  @include flex-center;
-  gap: 12px;
-}
+  gap: 20px;
+
+  @include mq(desk) {
+    @include flex-center;
+    gap: 12px;
+  }
 
   &--position {
     @include mq(desk) {
-    margin-left: auto;
+      margin-left: auto;
     }
+
     @include mq(noDesk) {
       @include block-center;
     }
-
   }
 
   &__user-mail {
@@ -37,11 +36,9 @@
   }
 
   &__user-mail--position {
-
     @include mq(desk) {
       margin-right: auto;
     }
-    
   }
 
   &__user-mail:hover,

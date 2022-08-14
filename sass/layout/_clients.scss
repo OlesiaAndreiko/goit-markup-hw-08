@@ -1,32 +1,30 @@
 /* Clients section */
 
 .clients {
- 
   .card-item {
-
     --card-item: 2;
 
-  @include mq (tab-only) {
-    --card-item: 3;
+    @include mq(tab-only) {
+      --card-item: 3;
+    }
+
+    @include mq(desk) {
+      --card-item: 6;
+    }
   }
 
-  @include mq (desk) {
-    --card-item: 6;
-  }
-}
-    
   &__link {
     @include flex-center;
-  
+
     height: 92px;
-  
+
     color: $social-clients-cl;
     border: 1px solid $social-clients-cl;
     border-radius: $radius-standart;
-  
+
     transition: color $animation, border-color $animation;
   }
-  
+
   &__link:hover,
   &__link:focus {
     border-color: $accent-cl;

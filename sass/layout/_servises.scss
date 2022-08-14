@@ -1,10 +1,9 @@
 /* Servises section */
 
 .services {
-  
- @include mq (noDesk) {
-  display: none;
- }
+  @include mq(noDesk) {
+    display: none;
+  }
 
   padding-top: 0;
 

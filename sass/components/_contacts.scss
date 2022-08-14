@@ -1,17 +1,30 @@
 // Company Contacts
 
 .contacts {
-
-  @include mq (mob-only) {
+  @include mq(mob-only) {
     display: none;
   }
-  
+
   @include flex-center;
-  gap: 50px;
+
+  @include mq(desk) {
+    gap: 30px;
+  }
+
+  @include mq(tab-only) {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 10px;
+
+    @include line-height(12px, 14.06px);
+  }
 
   &__link {
     @include flex-center;
-    @include padding-element;
+
+    @include mq(desk) {
+      @include padding-element;
+    }
   }
 
   &__link:hover,
@@ -20,7 +33,11 @@
   }
 
   &--position {
-    gap: 10px;
+    gap: 8px;
+
+    @include mq(desk) {
+      gap: 10px;
+    }
   }
 }
 

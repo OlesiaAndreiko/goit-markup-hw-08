@@ -34,6 +34,10 @@
   }
 
   &__text {
+    @include mq(noDesk) {
+      @include line-height(12px, 14.06px);
+    }
+
     user-select: none;
   }
 

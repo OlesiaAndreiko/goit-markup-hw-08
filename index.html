@@ -41,12 +41,13 @@
     <header class="header">
       <div class="container header__container">
         <a class="logo link" href="">
-          Web<span class="logo__header">Studio</span></a>
-<button class="menu-btn" type="button" >
-  <svg width="40" height="40">
-    <use href="./images/icons.svg#"></use>
-  </svg>
-</button>
+          Web<span class="logo__header">Studio</span></a
+        >
+        <button class="menu-btn" type="button" data-menu-open>
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
         <nav class="nav">
           <ul class="nav__list list">
             <li>
@@ -93,7 +94,7 @@
       <!-- Hero section -->
       <section class="hero hero--position">
         <h1 class="hero__title hero__title--position">
-          Ефективні рішення для&nbsp;вашого бізнесу
+          Ефективні рішення&nbsp;для вашого бізнесу
         </h1>
         <button
           class="basic-btn basic-btn--position"
@@ -824,7 +825,6 @@
         </div>
       </section>
     </main>
-    -->
     <!-- Footer section -->
     <footer class="footer section">
       <div class="container footer__info">
@@ -940,7 +940,7 @@
       </div>
     </footer>
     <!-- Modal window -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="icon" width="18" height="18">
@@ -969,7 +969,9 @@
               </span>
             </label>
             <label class="register__label--position">
-             <span class="register__name register__name--position">Телефон</span>
+              <span class="register__name register__name--position"
+                >Телефон</span
+              >
               <span class="register--wrap">
                 <input
                   class="register__input"
@@ -998,12 +1000,15 @@
               </span>
             </label>
             <label class="register__label--position">
-              <span class="register__name register__name--position">Коментар</span>
+              <span class="register__name register__name--position"
+                >Коментар</span
+              >
               <textarea
                 class="register__comment"
                 name="user-comment"
                 rows="5"
-                placeholder="Введіть текст"></textarea>
+                placeholder="Введіть текст"
+              ></textarea>
             </label>
           </div>
           <label class="agreement agreement--position">
@@ -1034,10 +1039,100 @@
               </a></span
             >
           </label>
-          <button class="basic-btn basic-btn--position" type="submit">Відправити</button>
+          <button class="basic-btn basic-btn--position" type="submit">
+            Відправити
+          </button>
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script> -->
+
+    <!-- Mobile menu -->
+
+    <div class="menu-overlay" data-menu>
+      <div class="menu-container">
+        <button class="menu-btn" type="button" data-menu-close>
+          <svg class="icon" width="40" height="40">
+            <use href="./images/icons.svg#close-menu"></use>
+          </svg>
+        </button>
+        <ul class="list mobile-nav">
+          <li class="mobile-nav__item mobile-nav--position">
+            <a href="" class="link mobile-nav__link">Студія</a>
+          </li>
+          <li class="mobile-nav__item mobile-nav--position">
+            <a href="./portfolio.html" class="link mobile-nav__link"
+              >Потфоліо</a
+            >
+          </li>
+          <li class="mobile-nav__item mobile-nav--position">
+            <a href="" class="link mobile-nav__link">Контакти</a>
+          </li>
+        </ul>
+
+        <ul class="list mobile-contact--position">
+          <li class="mobile-contact__item">
+            <a
+              class="link menu-mobile__phone"
+              href="tel:+380961111111"
+              aria-label="номер телефону"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-contact__item">
+            <a
+              class="link menu-mobile__mail"
+              href="mailto:info@devstudio.com"
+              aria-label="електронна пошта"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="list mobile-socials">
+          <li class="mobile-socials__item">
+            <a
+              class="link mobile-socials__link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="іконка Instagram"
+              >Instagram</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              class="link mobile-socials__link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="іконка Twitter"
+              >Twitter</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              class="link mobile-socials__link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="іконка Facebook"
+              >Facebook</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              class="link mobile-socials__link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="іконка LinkedIn"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--card-gap);
-
 }
 
 .card-item {
@@ -10,13 +9,13 @@
     (100% - (var(--card-item) - 1) * var(--card-gap)) / var(--card-item)
   );
 
-    --card-item: 1;
- 
-  @include mq (tab) {
+  --card-item: 1;
+
+  @include mq(tab) {
     --card-item: 2;
   }
 
-  @include mq (desk) {
+  @include mq(desk) {
     --card-item: 4;
   }
 }

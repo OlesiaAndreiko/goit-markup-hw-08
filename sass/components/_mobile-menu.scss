@@ -1,0 +1,139 @@
+.menu-btn {
+  position: absolute;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  right: 15px;
+
+  background-color: transparent;
+  border: none;
+
+  transition: color $animation;
+
+  cursor: pointer;
+
+  @include mq(tab) {
+    display: none;
+
+    margin-left: auto;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-cl;
+  }
+
+  .menu-overlay & {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $white-cl;
+
+  z-index: 100;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  transition: opacity $animation, visibility $animation;
+
+  @include mq(tab) {
+    display: none;
+  }
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: initial;
+    visibility: visible;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  max-width: 480px;
+  padding: 48px 40px;
+
+  font-weight: 500;
+  @include line-height(40px, 47px);
+
+  letter-spacing: 0.02em;
+
+  transform: translateX(100%);
+  transition: transform $animation;
+
+  .menu-overlay.is-open & {
+    transform: translateX(0%);
+  }
+}
+
+.mobile-nav {
+  &:nth-child(2) {
+    margin-bottom: auto;
+  }
+
+  &--position:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    color: $black-txt-cl;
+
+    transition: color $animation;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $accent-cl;
+    }
+  }
+}
+
+.mobile-contact--position {
+  margin-bottom: 64px;
+}
+
+.menu-mobile__phone {
+  @include line-height(34px, 40px);
+
+  color: $accent-cl;
+}
+
+.menu-mobile__mail {
+  @include line-height(24px, 28px);
+}
+
+.mobile-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @include line-height(18px, 22px);
+
+  color: $accent-cl;
+
+  &__item:not(:last-child) &__link {
+    display: flex;
+    padding-right: 10px;
+    border-right: 1px solid $border-mobile-cl;
+  }
+}

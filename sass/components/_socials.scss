@@ -2,9 +2,9 @@
 
 .socials {
   @include flex-center;
- 
+
   gap: 10px;
- }
+}
 
 .social-link {
   @include flex-center;

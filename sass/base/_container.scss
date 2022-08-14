@@ -5,21 +5,23 @@
   padding-right: 15px;
   @include block-center;
 
+  min-width: 320px;
+
   // breakpoint 480px for mobile screen
 
-  @include mq (mob) {
+  @include mq(mob) {
     width: 480px;
   }
 
   // breakpoint 768px for tablet screen
 
-  @include mq (tab) {
+  @include mq(tab) {
     width: 768px;
   }
 
   // breakpoint 1200px for desktop screen
 
-    @include mq (desk) {
+  @include mq(desk) {
     width: 1200px;
   }
 }
