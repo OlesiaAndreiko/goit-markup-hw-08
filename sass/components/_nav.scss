@@ -11,8 +11,11 @@
   }
 
   &--current {
-    position: relative;
     color: $accent-cl;
+
+    @include mq(tab) {
+      position: relative;
+    }
   }
 
   &--current::after {

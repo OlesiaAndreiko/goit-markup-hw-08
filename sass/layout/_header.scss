@@ -11,5 +11,11 @@
     display: flex;
     align-items: center;
     column-gap: 93px;
+
+    height: 60px;
+
+    @include mq(tab) {
+      height: 80px;
+    }
   }
 }

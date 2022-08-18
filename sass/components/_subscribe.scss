@@ -22,7 +22,11 @@
   }
 
   &__user-mail {
-    width: 358px;
+    width: 100%;
+    max-width: 450px;
+    @include mq (desk) {
+      width: 358px;
+    }
     height: 50px;
     padding: 15px;
 

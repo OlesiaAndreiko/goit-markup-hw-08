@@ -88,6 +88,8 @@
 
 .mobile-nav {
   &:nth-child(2) {
+    color: $black-txt-cl;
+
     margin-bottom: auto;
   }
 
@@ -96,8 +98,6 @@
   }
 
   &__link {
-    color: $black-txt-cl;
-
     transition: color $animation;
 
     &:active,
