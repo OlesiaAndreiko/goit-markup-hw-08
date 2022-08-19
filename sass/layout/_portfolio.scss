@@ -52,7 +52,6 @@
 }
 
 .project {
-
   .card-item {
     @include mq(desk) {
       --card-item: 3;
@@ -92,15 +91,15 @@
       padding: 45px 20px;
     }
 
-    @include mq (tab-only) {
+    @include mq(tab-only) {
       padding-top: 49px;
     }
 
-    @include mq (desk) {
+    @include mq(desk) {
       padding-top: 63px;
       padding-bottom: 63px;
     }
-    
+
     background-color: $ovarlay-project-cl;
 
     opacity: 0;

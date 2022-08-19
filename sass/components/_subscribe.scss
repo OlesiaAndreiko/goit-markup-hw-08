@@ -11,20 +11,10 @@
     gap: 12px;
   }
 
-  // &--position {
-  //   @include mq(desk) {
-  //     margin-left: auto;
-  //   }
-
-  //   @include mq(noDesk) {
-  //     @include block-center;
-  //   }
-  // }
-
   &__user-mail {
     width: 100%;
     max-width: 450px;
-    @include mq (desk) {
+    @include mq(desk) {
       width: 358px;
     }
     height: 50px;
