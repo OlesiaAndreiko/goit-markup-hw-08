@@ -389,17 +389,6 @@ input {
     gap: 12px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .subscribe--position {
-    margin-left: auto;
-  }
-}
-@media (max-width: 1199.98px) {
-  .subscribe--position {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 .subscribe__user-mail {
   width: 100%;
   max-width: 450px;

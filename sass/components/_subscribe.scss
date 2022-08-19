@@ -11,15 +11,15 @@
     gap: 12px;
   }
 
-  &--position {
-    @include mq(desk) {
-      margin-left: auto;
-    }
+  // &--position {
+  //   @include mq(desk) {
+  //     margin-left: auto;
+  //   }
 
-    @include mq(noDesk) {
-      @include block-center;
-    }
-  }
+  //   @include mq(noDesk) {
+  //     @include block-center;
+  //   }
+  // }
 
   &__user-mail {
     width: 100%;
