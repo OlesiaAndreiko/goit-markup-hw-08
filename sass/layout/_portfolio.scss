@@ -26,7 +26,7 @@
 }
 
 .filter-btn {
-  padding: 6px 22px;
+  padding: 6px 25px;
 
   font-family: inherit;
   background: $light-bg-cl;
@@ -52,6 +52,7 @@
 }
 
 .project {
+
   .card-item {
     @include mq(desk) {
       --card-item: 3;
@@ -59,7 +60,9 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     transition: box-shadow $animation;
   }
@@ -83,6 +86,23 @@
     width: 100%;
     height: 100%;
 
+    padding: 77px 24px;
+
+    @media (max-width: 350px) {
+      padding: 45px 20px;
+    }
+
+    @include mq (tab-only) {
+      padding-top: 49px;
+    }
+
+    @include mq (desk) {
+      padding-top: 63px;
+      padding-bottom: 63px;
+    }
+    
+    background-color: $ovarlay-project-cl;
+
     opacity: 0;
     transform: translateY(100%);
 
@@ -90,12 +110,14 @@
   }
 
   &__text {
-    padding: 63px 24px;
+    height: 100%;
+    overflow: auto;
+    // padding: 63px 24px;
 
     @include line-height(18px, 28px);
 
     color: $white-cl;
-    background-color: $ovarlay-project-cl;
+    // background-color: $ovarlay-project-cl;
   }
 
   &__link:hover &__overlay,
@@ -106,6 +128,8 @@
 
   &__caption {
     padding: 20px 24px;
+
+    flex-grow: 1;
 
     border: 1px solid $border-project-cl;
     border-top: none;

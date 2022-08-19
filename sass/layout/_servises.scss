@@ -5,6 +5,12 @@
     display: none;
   }
 
+  .card-item {
+    @include mq(desk) {
+      --card-item: 3;
+    }
+  }
+
   padding-top: 0;
 
   &__card {

@@ -9,7 +9,8 @@
     (100% - (var(--card-item) - 1) * var(--card-gap)) / var(--card-item)
   );
 
-  --card-item: 1;
+  // mobile-first 
+  // --card-item: 1;
 
   @include mq(tab) {
     --card-item: 2;

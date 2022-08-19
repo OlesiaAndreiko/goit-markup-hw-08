@@ -20,6 +20,10 @@
   }
 
   &__title {
+    @include mq(mob-only) {
+      text-align: center;
+    }
+
     @include line-height(14px, 16px);
     text-transform: uppercase;
 

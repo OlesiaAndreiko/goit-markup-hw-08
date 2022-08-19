@@ -13,7 +13,6 @@
     justify-content: center;
     gap: 60px;
    
-
     @include mq(tab) {
       flex-direction: row;
     }
@@ -26,10 +25,8 @@
       align-items: baseline;
       gap: 70px;
     }
-
     }
   
-
   &__address {
     font-style: inherit;
 
