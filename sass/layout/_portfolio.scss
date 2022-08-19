@@ -87,7 +87,7 @@
 
     padding: 77px 24px;
 
-    @media (max-width: 350px) {
+    @media (max-width: 440px) {
       padding: 45px 20px;
     }
 
@@ -111,12 +111,10 @@
   &__text {
     height: 100%;
     overflow: auto;
-    // padding: 63px 24px;
 
     @include line-height(18px, 28px);
 
     color: $white-cl;
-    // background-color: $ovarlay-project-cl;
   }
 
   &__link:hover &__overlay,
