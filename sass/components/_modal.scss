@@ -9,9 +9,12 @@
   width: 450px;
   height: 609px;
 
-  @media screen and (max-width: 480px) {
-    top: 100%;
+  @media screen and (max-width: 450px) {
     width: 100%;
+  }
+
+  @media screen and (max-height: 609px) {
+    top: 100%;
   }
 
   @include mq(desk) {
