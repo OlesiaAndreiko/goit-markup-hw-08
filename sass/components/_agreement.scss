@@ -30,6 +30,7 @@
   }
 
   &__icon {
+    flex-shrink: 0;
     transition: fill $animation;
   }
 

@@ -68,10 +68,13 @@
 .menu-container {
   display: flex;
   flex-direction: column;
+  gap: 64px;
 
   height: 100%;
-  max-width: 480px;
+  width: 100%;
   padding: 48px 40px;
+
+  overflow: auto;
 
   font-weight: 500;
   @include line-height(40px, 47px);
@@ -106,10 +109,6 @@
       color: $accent-cl;
     }
   }
-}
-
-.mobile-contact--position {
-  margin-bottom: 64px;
 }
 
 .menu-mobile__phone {

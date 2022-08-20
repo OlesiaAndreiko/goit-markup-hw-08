@@ -259,16 +259,18 @@ input {
     position: relative;
   }
 }
-.nav--current::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #2196f3;
+@media screen and (min-width: 768px) {
+  .nav--current::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196f3;
+  }
 }
 .nav__link {
   display: -webkit-box;
@@ -473,11 +475,12 @@ input {
 /* Modal window */
 .modal {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  width: 450px;
+  -webkit-transform: translate(-50%) scale(1);
+          transform: translate(-50%) scale(1);
+  max-width: 450px;
+  width: 100%;
   height: 609px;
   padding: 40px;
   background-color: #ffffff;
@@ -489,14 +492,11 @@ input {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 768px) {
   .modal {
-    width: 100%;
-  }
-}
-@media screen and (max-height: 609px) {
-  .modal {
-    top: 100%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -578,9 +578,6 @@ input {
 }
 
 /* Modal-register-form */
-.register {
-  text-align: center;
-}
 .register__title {
   display: block;
   font-size: 20px;
@@ -702,6 +699,8 @@ input {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .agreement__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -791,9 +790,11 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 64px;
   height: 100%;
-  max-width: 480px;
+  width: 100%;
   padding: 48px 40px;
+  overflow: auto;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.18;
@@ -823,10 +824,6 @@ input {
 }
 .mobile-nav__link:active, .mobile-nav__link:hover, .mobile-nav__link:focus {
   color: #2196f3;
-}
-
-.mobile-contact--position {
-  margin-bottom: 64px;
 }
 
 .menu-mobile__phone {
